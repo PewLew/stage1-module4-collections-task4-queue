@@ -6,9 +6,9 @@ import java.util.PriorityQueue;
 
 public class PriorityQueueCreator {
     public PriorityQueue<String> createPriorityQueue(List<String> firstList, List<String> secondList) {
-        PriorityQueue<String> queue = new PriorityQueue<>(Comparator.reverseOrder());
-        queue.addAll(firstList);
-        queue.addAll(secondList);
-        return  queue;
+        PriorityQueue<String> queuee = new PriorityQueue<>(Comparator.reverseOrder());
+        queuee.addAll(firstList);
+        queuee.addAll(secondList);
+        return  queuee;
     }
 }
