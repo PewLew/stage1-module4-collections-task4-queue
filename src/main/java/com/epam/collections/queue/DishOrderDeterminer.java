@@ -9,8 +9,8 @@ public class DishOrderDeterminer {
         int sum = 0;
         while(dishes.size()!=numberOfDishes){
             sum += everyDishNumberToEat;
-            if(sum >10)
-                sum = sum-10;
+            if(sum >numberOfDishes)
+                sum = sum-numberOfDishes;
             System.out.print(sum + " ");
             dishes.add(sum);
         }
