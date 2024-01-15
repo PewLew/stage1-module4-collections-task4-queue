@@ -6,6 +6,20 @@ import java.util.Queue;
 
 public class ArrayDequeCreator extends PriorityQueue<String> {
     public ArrayDeque<Integer> createArrayDeque(Queue<Integer> firstQueue, Queue<Integer> secondQueue) {
-        return null;
+        ArrayDeque<Integer> deque = new ArrayDeque<>();
+        deque.addLast(firstQueue.poll());
+        deque.addLast(firstQueue.poll());
+        deque.addLast(secondQueue.poll());
+        deque.addLast(secondQueue.poll());
+        while(!firstQueue.isEmpty() && !secondQueue.isEmpty()){
+            firstQueue.add(deque.pollFirst());
+            secondQueue.add(deque.pollFirst());
+            deque.offerLast(firstQueue.poll());
+            deque.offerLast(firstQueue.poll());
+            deque.offerLast(secondQueue.poll());
+            deque.offerLast(secondQueue.poll());
+        }
+
+        return deque;
     }
 }
