@@ -12,7 +12,8 @@ public class DishOrderDeterminer {
             if(sum >numberOfDishes)
                 sum = sum-numberOfDishes;
             System.out.print(sum + " ");
-            dishes.add(sum);
+            if(!dishes.contains(sum))
+                dishes.add(sum);
         }
         return dishes;
     }
